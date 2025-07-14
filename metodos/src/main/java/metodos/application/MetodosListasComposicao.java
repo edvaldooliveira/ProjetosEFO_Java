@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Scanner;
 
 @SpringBootApplication
-public class Application {
+public class MetodosListasComposicao {
 
 	//Agenda, Pessoa
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(MetodosListasComposicao.class, args);
 
 		Scanner entrada = new Scanner(System.in);
 		char repetir = 's';
