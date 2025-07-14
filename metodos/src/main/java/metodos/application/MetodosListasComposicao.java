@@ -11,35 +11,39 @@ import java.util.Scanner;
 public class MetodosListasComposicao {
 
 	//Agenda, Pessoa
+	//while, if, else, isEmpty, charAt(0), !resposta, Integer.parseInt, char, ||, '', imprimir fora do laço.
 	public static void main(String[] args) {
 		SpringApplication.run(MetodosListasComposicao.class, args);
 
-		Scanner entrada = new Scanner(System.in);
-		char repetir = 's';
+		Scanner sc = new Scanner(System.in);
+
 		Agenda ag = new Agenda();
 
-		while (repetir == 's' || repetir == 'S') {
-			System.out.print("Nome de entrada: ");
-			String nome = entrada.nextLine();
+		char continuar = 's';
 
-			System.out.print("Idade de entrada: ");
-			int idade = Integer.parseInt(entrada.nextLine()); // evita conflito de buffer
+		while (continuar == 's' || continuar == 'S') {
+
+			System.out.print("Informe o nome da pessoa: ");
+			String nome = sc.nextLine();
+
+			System.out.print("Informe a idade da pessoa: ");
+			Integer idade = Integer.parseInt(sc.nextLine());
 
 			ag.adicionarPessoa(new Pessoa(nome, idade));
 
-			System.out.print("Deseja adicionar outra pessoa? (s/n): ");
-			String resposta = entrada.nextLine();
+			ag.removerPessoa(new Pessoa(nome, idade));
+
+			System.out.print("Dejesa continuar : ('s/n')");
+			String resposta = sc.nextLine();
 
 			if (!resposta.isEmpty()) {
-				repetir = resposta.charAt(0);
-			} else {
-				repetir = 'n'; // Se nada for digitado, encerra
+				continuar = resposta.charAt(0);
 			}
 		}
 
-		System.out.println("\nLista de nomes:");
+		System.out.println("Dados de pessoa\n: ");
 		ag.listaNomes();
+		sc.close();
 
-		entrada.close();
 	}
 }

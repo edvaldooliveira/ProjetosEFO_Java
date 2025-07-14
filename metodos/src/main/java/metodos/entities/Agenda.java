@@ -18,4 +18,8 @@ public class Agenda {
             System.out.println("Nome: " + p.getNome() + ", Idade: " + p.getIdade());
         }
     }
+
+    public void removerPessoa(Pessoa p){
+        listaPessoa.remove(p);
+    }
 }
