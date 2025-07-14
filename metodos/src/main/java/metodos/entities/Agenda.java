@@ -15,7 +15,7 @@ public class Agenda {
 
     public void listaNomes(){
         for (Pessoa p : listaPessoa) {
-            System.out.println(p.getNome());
+            System.out.println("Nome: " + p.getNome() + ", Idade: " + p.getIdade());
         }
     }
 }
