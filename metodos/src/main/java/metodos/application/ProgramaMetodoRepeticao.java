@@ -9,14 +9,11 @@ public class ProgramaMetodoRepeticao {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        MetodoRepeticao mt = new MetodoRepeticao();
+        MetodoRepeticao repete = new MetodoRepeticao();
+        System.out.print("informe o valor para ser somado: ");
+        double valore = sc.nextInt();
 
-        System.out.print("Informe o valor: ");
-        int numero = sc.nextInt();
-
-        mt.contar(numero);
-
-
+        repete.facaenquanto(valore);
 
 
 
