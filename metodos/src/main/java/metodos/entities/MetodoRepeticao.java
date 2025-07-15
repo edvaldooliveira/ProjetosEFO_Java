@@ -37,7 +37,7 @@ public class MetodoRepeticao {
         }
     }
 
-    public void mostrarMulticlique() {
+    public void mostrarMultiplique() {
         int y = 0;
         int x = 0;
         for (int i = 1; i<5; i++){
@@ -47,8 +47,5 @@ public class MetodoRepeticao {
         }
         System.out.print( "\n" + x);
     }
-
-
-
 
 }

@@ -25,7 +25,7 @@ public class MetodosListasFor {
 		met.imprimirLista();*/
 
 		MetodoRepeticao mt = new MetodoRepeticao();
-		mt.teste();
+
 
 
 
