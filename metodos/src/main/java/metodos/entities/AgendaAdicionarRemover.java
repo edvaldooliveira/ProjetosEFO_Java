@@ -23,6 +23,8 @@ public class AgendaAdicionarRemover {
         return false;
     }
 
+
+
     public void listarDetalhado() {
         for (Pessoa p : lista) {
             System.out.println(p.getNome() + " - " + p.getIdade() + " anos");

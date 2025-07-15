@@ -1,14 +1,10 @@
 package metodos.application;
 
-import metodos.entities.Agenda;
+
 import metodos.entities.AgendaAdicionarRemover;
 import metodos.entities.Pessoa;
-
 import java.util.Scanner;
-
 public class ProgramaAdicionarRemover {
-
-
 
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
