@@ -18,14 +18,14 @@ public class Application {
 		Curso c = new Curso();
 		Aluno a = new Aluno();
 
-		System.out.println("Escolha uma das opções:");
+		/*System.out.println("Escolha uma das opções:");
 		System.out.println("[1] Adicionar aluno");
 		System.out.println("[2] Listar alunos");
 		System.out.println("[3] Sair");
-		System.out.print("Opção: ");
-		int opcao = Integer.parseInt(sc.nextLine());
+		System.out.print("Opção: ");*/
+		//int opcao = Integer.parseInt(sc.nextLine());
 
-		c.funcionalidadeParaAluno(opcao,sc);
+		c.funcionalidadeParaAluno(sc);
 
 
 

@@ -33,33 +33,39 @@ public class Curso {
         }
     }
 
-    public void funcionalidadeParaAluno(int opcao, Scanner sc){
-
+    public void funcionalidadeParaAluno(Scanner sc) {
         char escolha = 's';
+
         while (escolha == 's' || escolha == 'S') {
-            int continuar = opcao;
-        switch(continuar){
-            case 1:
-                System.out.print("\nInforme o nome do Aluno: ");
-                String nome = sc.nextLine();
-                System.out.print("Informe a idade do Aluno: ");
-                int idade = Integer.parseInt(sc.nextLine());
-                System.out.print("Informe a matrícula do Aluno: ");
-                String matricula = sc.nextLine();
 
-                adicionarAlunos(new Aluno(nome, idade,matricula));
-                break;
+            System.out.print("\nEscolha uma opção:\n [1] Adicionar \n [2] Listar: ");
+            int opcao = Integer.parseInt(sc.nextLine());
 
-            case 2:
-                imprimirListaDeAluno();
-                break;
-        }
-            System.out.print("\nESCOLHA UMA DAS OPÇÕES: (S/N) = ");
+            switch (opcao) {
+                case 1:
+                    System.out.print("Informe o nome do Aluno: ");
+                    String nome = sc.nextLine();
+
+                    System.out.print("Informe a idade do Aluno: ");
+                    int idade = Integer.parseInt(sc.nextLine());
+
+                    System.out.print("Informe a matrícula do Aluno: ");
+                    String matricula = sc.nextLine();
+
+                    adicionarAlunos(new Aluno(nome, idade, matricula));
+                    break;
+
+                case 2:
+                    imprimirListaDeAluno();
+                    break;
+
+                default:
+                    System.out.println("Opção inválida.");
+            }
+
+            System.out.print("\nDeseja continuar? (S/N): ");
             escolha = sc.next().charAt(0);
-            sc.nextLine();
-            if (escolha != 's');
-
-    }
-
+            sc.nextLine(); // limpa o buffer do Enter
+        }
     }
 }
